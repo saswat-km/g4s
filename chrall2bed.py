@@ -1,3 +1,6 @@
+# Takes all chromosome file data with quadron scores 
+# as input and converts into a single .bed file format. 
+
 import numpy as np
 import pandas as pd
 
