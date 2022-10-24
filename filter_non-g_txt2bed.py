@@ -65,7 +65,3 @@ for chr in range(1,23):
     print("Completed Chr: %i" %chr)
 
 f.close()
-
-#df = pd.read_csv('chr_all_G/chr_all_G+C-.bed', sep='\t', comment='t', header=None)
-#header = ['chrom', 'chromStart', 'chromEnd', 'quadron', 'sign', 'length']
-#df.columns = header[:len(df.columns)]
