@@ -1,5 +1,5 @@
 # Takes all chromosome file data with quadron scores 
-# as input and extracts the G(+ strand) and C (- strand) and 
+# as input and extracts the G (+ strand) and C (- strand) and 
 # converts into a single .bed file format. 
 
 import numpy as np
