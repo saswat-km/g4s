@@ -1,3 +1,8 @@
+# This takes a BigWig file and a .bed 
+# file, and extracts the phastcon scores
+# for the regions between the regions 
+# defined between the .bed file
+
 import pyBigWig
 import numpy as np
 import pandas as pd
@@ -6,10 +11,8 @@ from time import time
 bw = pyBigWig.open("hg38.phastCons30way.bw")
 
 df = pd.read_csv('../input_files/Stochastic_nonCORE_origins_hg38.bed', sep='\t', comment='t', header=None) #reading the template file
-#df = pd.read_csv('../no_overlap_chr_all_quadron_len_less_100.bed', sep='\t', comment='t', header=None) #reading the template file
 header = ['chrom', 'chromStart', 'chromEnd', 'annotate'] #'quadron', 'sign', 'length', 'phastcon']
 df.columns = header[:len(df.columns)]
-#phastcon = np.zeros(len(df)-1)
 phastcon = np.empty([len(df)-1,4],dtype="<U9")
 
 f = open("stochastic_non-ro_error_file.txt", "w")
