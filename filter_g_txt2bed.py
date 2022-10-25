@@ -8,7 +8,7 @@ import pandas as pd
 def consecutive(data, stepsize=1):
     return np.split(data, np.where(np.diff(data) != stepsize)[0]+1)
 
-f = open("chr_all_G/chr_all_G+C-.bed","w")
+f = open("chr_all_G/chr_all_G+C-.bed","w") #customizable
 
 for chr in range(1,23):
     data = open('input_files/output.chr%s.txt' %chr,'r') #customizable
