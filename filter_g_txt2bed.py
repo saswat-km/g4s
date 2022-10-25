@@ -11,11 +11,11 @@ def consecutive(data, stepsize=1):
 f = open("chr_all_G/chr_all_G+C-.bed","w")
 
 for chr in range(1,23):
-    data = open('input_files/output.chr%s.txt' %chr,'r')
+    data = open('input_files/output.chr%s.txt' %chr,'r') #customizable
     data = data.readlines()
     begin_prev = 0
 
-    if chr > 9: #adjust for matthias error
+    if chr > 9: #adjust for matthias error #customizable
         adjust = 6
     else:
         adjust = 5
@@ -41,7 +41,7 @@ for chr in range(1,23):
                     begin = j[0] + var
                     end = j[-1] + var
                     if begin > begin_prev:
-                        f.write("chr%s\t%i\t%i\t%.2f\t%s\t%i\n" %(chr,begin,end+1,float(crit[4]),crit[2],length))
+                        f.write("chr%s\t%i\t%i\t%.2f\t%s\t%i\n" %(chr,begin,end+1,float(crit[4]),crit[2],length)) 
                         begin_prev = begin
     print("Completed Chr: %i" %chr)
 
